@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-int sum(int a, int b)
+int fib(int n)
 {
-  return a + b;
+  if (n == 0) return 0;
+  if (n == 1) return 1;
+  return fib(n-1) + fib(n-2);
 }
 
 int main()
 {
   printf("Hello world!\n");
-  printf("Sum: %d\n", sum(3, 2));
+  printf("%d\n", fib(5));
   return 0;
 }
 
